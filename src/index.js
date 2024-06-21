@@ -9,21 +9,10 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getDatabase, ref, set,get, push, child, remove} from "firebase/database";
 import { getStorage, ref as storageRef, uploadBytes , getDownloadURL} from "firebase/storage";
 import { getAuth } from "firebase/auth";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "hidden",
-    authDomain: "hidden",
-    databaseURL: "hidden",
-    projectId: "hidden",
-    storageBucket: "hidden",
-    messagingSenderId: "hidden",
-    appId: "hidden",
-    measurementId: "hidden"
-};
+import { firebaseConfigExport } from "../privateKeys/webpackConfig";
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfigExport);
 // Initialize Firebase Storage
 const storage = getStorage();
 //Initialize firebase
@@ -59,6 +48,7 @@ loginButton.addEventListener('click', (e) => {
             const user = result.user;
             email = user.email;
             console.log(email);
+            loadMenu("seriesChoiceMenu")
             
         }).catch((error) => {
             const errorCode = error.code;
@@ -119,15 +109,19 @@ document.addEventListener("DOMContentLoaded", async function() {
 /* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
 
 const startMenu = document.getElementById("startMenu");
+const seriesChoiceMenu = document.getElementById("seriesChoiceMenu");
 
 function hideAllMenus() {
-    startMenu.style.display = "hidden";
+    startMenu.style.display = "none";
+    seriesChoiceMenu.style.display = "none"; 
 }
 
 function loadMenu(menuName) {
     hideAllMenus();
     if (menuName == "startMenu") {
         startMenu.style.display = "flex";
+    } else if (menuName == "seriesChoiceMenu") {
+        seriesChoiceMenu.style.display = "flex"; 
     }
 }
 
