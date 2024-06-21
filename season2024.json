@@ -1,0 +1,650 @@
+{
+    "scoring": {
+        "sprintQualy": [999,-5,-5,-4,-4,-3,-3,-2,-2,-1,-1,1,1,2,2,3,3,4,4,5,5],
+        "sprintFinish": [999,-10,-9,-8,-7,-6,-5,-4,-3,-2,-2,1,2,3,4,5,6,7,8,9,10],
+        "qualy": [999,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10],
+        "raceFinish": [999,-25,-18,-15,-12,-10,-8,-6,-4,-2,-1,1,2,4,6,8,10,12,15,18,25]
+    },
+
+    "races": {
+
+        "list": [
+            "BHR",
+            "SAU",
+            "AUS"
+        ],
+
+        "BHR": {
+            "laps": 57,
+            "date": "03/02/24",
+            "sprint": false
+        },
+
+        "SAU": {
+            "laps": 50,
+            "date": "03/09/24"
+        },
+
+        "AUS": {
+            "laps": 58,
+            "date": "03/24/24"
+        }
+
+    },
+
+    "teamates": {
+
+        "VER": "PER",
+        "PER": "VER",
+
+        "HAM": "RUS",
+        "RUS": "HAM",
+        
+        "LEC": "SAI",
+        "SAI": "LEC",
+        
+        "NOR": "PIA",
+        "PIA": "NOR",
+        
+        "ALO": "STR",
+        "STR": "ALO",
+
+        "GAS": "OCO",
+        "OCO": "GAS",
+
+        "ALB": "SAR",
+        "SAR": "ALB",
+
+        "TSU": "RIC",
+        "RIC": "TSU",
+
+        "BOT": "ZHO",
+        "ZHO": "BOT",
+
+        "HUL": "MAG",
+        "MAG": "HUL"
+
+    },
+
+    "drivers": {
+
+        "list": [
+            "VER", 
+            "PER",
+            "HAM",
+            "RUS",
+            "LEC",
+            "SAI",
+            "NOR",
+            "PIA",
+            "ALO",
+            "STR",
+            "GAS",
+            "OCO",
+            "ALB",
+            "SAR",
+            "TSU",
+            "RIC",
+            "BOT",
+            "ZHO",
+            "HUL",
+            "MAG"
+        ],
+
+        "VER": {
+            "div": "----- ----- ----- ----- ----- ----- VER ----- ----- ----- ----- ----- -----",
+            "team": "RBR",
+            "number": 1,
+            "results": 
+            {
+                "BHR": {
+                    "qualy": 1,
+                    "race": 1,
+                    "finish": true,
+                    "laps": 57  
+                },
+
+                "SAU": {
+                    "qualy": 1,
+                    "race": 1,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 1,
+                    "race": 20,
+                    "finish": false,
+                    "laps": 3  
+                }
+            }
+        },
+
+        "PER": {
+            "div": "----- ----- ----- ----- ----- ----- PER ----- ----- ----- ----- ----- -----",
+            "team": "RBR",
+            "number": 11,
+            "results": {
+                "BHR": {
+                    "qualy": 5,
+                    "race": 2,
+                    "finish": true,
+                    "laps": 57
+                },
+
+                "SAU": {
+                    "qualy": 3,
+                    "race": 2,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 3,
+                    "race": 5,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+
+        "HAM": {
+            "div": "----- ----- ----- ----- ----- ----- HAM ----- ----- ----- ----- ----- -----",
+            "team": "MER",
+            "number": 44,
+            "results": {
+                "BHR": {
+                    "qualy": 9,
+                    "race": 7,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 8,
+                    "race": 9,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 11,
+                    "race": 18,
+                    "finish": false,
+                    "laps": 15  
+                }
+            }
+        },
+
+        "RUS": {
+            "div": "----- ----- ----- ----- ----- ----- RUS ----- ----- ----- ----- ----- -----",
+            "team": "MER",
+            "number": 63,
+            "results": {
+                "BHR": {
+                    "qualy": 3,
+                    "race": 5,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 7,
+                    "race": 6,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 7,
+                    "race": 17,
+                    "finish": false,
+                    "laps": 56  
+                }
+            }
+        },        
+
+        "LEC": {
+            "div": "----- ----- ----- ----- ----- ----- LEC ----- ----- ----- ----- ----- -----",
+            "team": "FER",
+            "number": 16,
+            "results": {
+                "BHR": {
+                    "qualy": 2,
+                    "race": 4,
+                    "finish": true,
+                    "laps": 57       
+                },
+                
+                "SAU": {
+                    "qualy": 2,
+                    "race": 3,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 5,
+                    "race": 2,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+
+        "SAI": {
+            "div": "----- ----- ----- ----- ----- ----- SAI ----- ----- ----- ----- ----- -----",
+            "team": "FER",
+            "number": 55,
+            "results": {
+                "BHR": {
+                    "qualy": 4,
+                    "race": 3,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 11,
+                    "race": 7,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 2,
+                    "race": 1,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+
+        "NOR": {
+            "div": "----- ----- ----- ----- ----- ----- NOR ----- ----- ----- ----- ----- -----",
+            "team": "MCL",
+            "number": 4,
+            "results": {
+                "BHR": {
+                    "qualy": 7,
+                    "race": 6,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 6,
+                    "race": 8,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 4,
+                    "race": 3,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+        "PIA": {
+            "div": "----- ----- ----- ----- ----- ----- PIA ----- ----- ----- ----- ----- -----",
+            "team": "MCL",
+            "number": 81,
+            "results": {
+                "BHR": {
+                    "qualy": 8,
+                    "race": 8,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 5,
+                    "race": 4,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 6,
+                    "race": 4,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+
+        "ALO": {
+            "div": "----- ----- ----- ----- ----- ----- ALO ----- ----- ----- ----- ----- -----",
+            "team": "AST",
+            "number": 14,
+            "results": {
+                "BHR": {
+                    "qualy": 6,
+                    "race": 9,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 4,
+                    "race": 5,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 10,
+                    "race": 8,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        }, 
+        "STR": {
+            "div": "----- ----- ----- ----- ----- ----- STR ----- ----- ----- ----- ----- -----",
+            "team": "AST",
+            "number": 18,
+            "results": {
+                "BHR": {
+                    "qualy": 12,
+                    "race": 10,
+                    "finish": true,
+                    "laps": 57       
+                },
+
+                "SAU": {
+                    "qualy": 10,
+                    "race": 19,
+                    "finish": false,
+                    "laps": 5  
+                },
+                
+                "AUS": {
+                    "qualy": 9,
+                    "race": 6,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+
+        "GAS": {
+            "div": "----- ----- ----- ----- ----- ----- GAS ----- ----- ----- ----- ----- -----",
+            "team": "ALP",
+            "number": 10,
+            "results": {
+                "BHR": {
+                    "qualy": 20,
+                    "race": 18,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 18,
+                    "race": 20,
+                    "finish": false,
+                    "laps": 1  
+                },
+                
+                "AUS": {
+                    "qualy": 17,
+                    "race": 13,
+                    "finish": true,
+                    "laps": 57  
+                }
+            }
+        },
+        "OCO": {
+            "div": "----- ----- ----- ----- ----- ----- OCO ----- ----- ----- ----- ----- -----",
+            "team": "ALP",
+            "number": 31,
+            "results": {
+                "BHR": {
+                    "qualy": 19,
+                    "race": 17,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 17,
+                    "race": 13,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 15,
+                    "race": 16,
+                    "finish": true,
+                    "laps": 57  
+                }
+            }
+        }, 
+
+        "ALB": {
+            "div": "----- ----- ----- ----- ----- ----- ALB ----- ----- ----- ----- ----- -----",
+            "team": "WIL",
+            "number": 23,
+            "results": {
+                "BHR": {
+                    "qualy": 13,
+                    "race": 15,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 12,
+                    "race": 11,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 12,
+                    "race": 11,
+                    "finish": true,
+                    "laps": 57  
+                }
+            }
+        }, 
+        "SAR": {
+            "div": "----- ----- ----- ----- ----- ----- SAR ----- ----- ----- ----- ----- -----",
+            "team": "WIL",
+            "number": 2,
+            "results": {
+                "BHR": {
+                    "qualy": 18,
+                    "race": 20,
+                    "finish": true,
+                    "laps": 55       
+                },
+
+                "SAU": {
+                    "qualy": 19,
+                    "race": 14,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 20,
+                    "race": 20,
+                    "finish": false,
+                    "laps": 0  
+                }
+            }
+        },
+
+        "TSU": {
+            "div": "----- ----- ----- ----- ----- ----- TSU ----- ----- ----- ----- ----- -----",
+            "team": "VRB",
+            "number": 22,
+            "results": {
+                "BHR": {
+                    "qualy": 11,
+                    "race": 14,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 9,
+                    "race": 15,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 8,
+                    "race": 7,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        },
+        "RIC": {
+            "div": "----- ----- ----- ----- ----- ----- RIC ----- ----- ----- ----- ----- -----",
+            "team": "VRB",
+            "number": 3,
+            "results": {
+                "BHR": {
+                    "qualy": 14,
+                    "race": 13,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 14,
+                    "race": 16,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 18,
+                    "race": 12,
+                    "finish": true,
+                    "laps": 57
+                }
+            }
+        },
+
+        "BOT": {
+            "div": "----- ----- ----- ----- ----- ----- BOT ----- ----- ----- ----- ----- -----",
+            "team": "SAU",
+            "number": 77,
+            "results": {
+                "BHR": {
+                    "qualy": 16,
+                    "race": 19,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 16,
+                    "race": 17,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 13,
+                    "race": 14,
+                    "finish": true,
+                    "laps": 57  
+                }
+            }
+        },
+        "ZHO": {
+            "div": "----- ----- ----- ----- ----- ----- ZHO ----- ----- ----- ----- ----- -----",
+            "team": "SAU",
+            "number": 24,
+            "results": {
+                "BHR": {
+                    "qualy": 17,
+                    "race": 11,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 20,
+                    "race": 18,
+                    "finish": true,
+                    "laps": 49  
+                },
+                
+                "AUS": {
+                    "qualy": 19,
+                    "race": 15,
+                    "finish": true,
+                    "laps": 57
+                }
+            }
+        },
+
+        "HUL": {
+            "div": "----- ----- ----- ----- ----- ----- HUL ----- ----- ----- ----- ----- -----",
+            "team": "HAS",
+            "number": 27,
+            "results": {
+                "BHR": {
+                    "qualy": 10,
+                    "race": 16,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 15,
+                    "race": 10,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 16,
+                    "race": 9,
+                    "finish": true,
+                    "laps": 58  
+                }
+            }
+        }, 
+        "MAG": {
+            "div": "----- ----- ----- ----- ----- ----- MAG ----- ----- ----- ----- ----- -----",
+            "team": "HAS",
+            "number": 20,
+            "results": {
+                "BHR": {
+                    "qualy": 15,
+                    "race": 12,
+                    "finish": true,
+                    "laps": 56       
+                },
+
+                "SAU": {
+                    "qualy": 13,
+                    "race": 12,
+                    "finish": true,
+                    "laps": 50  
+                },
+                
+                "AUS": {
+                    "qualy": 14,
+                    "race": 10,
+                    "finish": true,
+                    "laps": 57  
+                }
+            }
+        }
+
+    }
+
+}

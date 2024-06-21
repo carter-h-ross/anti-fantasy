@@ -1,0 +1,56 @@
+f1 anti fantasy points system 
+
+race finish:
+1. -25
+2. -18 
+3. -15
+4. -12
+5. -10
+6. -8
+7. -6
+8. -4
+9. -2
+10. -1
+11. 1
+12. 2
+13. 4
+14. 6
+15. 8
+16. 10
+17. 12
+18. 15
+19. 18
+20. 25
+
+qualy / sprint finish:
+1. -10
+2. -9
+3. -8
+4. -7
+5. -6
+6. -5
+7. -4
+8. -3
+9. -2
+10. -1
+11. 1
+12. 2
+13. 3
+14. 4
+15. 5
+16. 6
+17. 7
+18. 8
+19. 9
+20. 10
+
+bonuses:
+* beat teamate in qualy. -5
+* made q3 when teamate out in q1. -10
+* made q3 when teamate out in q2. -5
+* out in q1 when teamate in q3. 10
+* out in q2 when teamate in q3. 5
+* dnf from the race. 5 x (21 - position qualified + (laps completed / total race laps) x 10) rounded down to nearest whole number.
+
+This website is unofficial and is not associated in any way with the Formula 1 companies. 
+F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.

@@ -1,0 +1,86 @@
+/* index.css */
+.gradient-background {
+    background: linear-gradient(342deg, #000000, #efefec, #e71818);
+    background-size: 200% 200%; /* Ensures the background can animate smoothly */
+    background-repeat: no-repeat;
+    animation: gradient-animation 10s ease infinite; /* Increased duration for smoother transition */
+    height: 100vh; /* Ensures the body takes full viewport height */
+    overflow: hidden; /* Ensures no scrolling */
+    margin: 0; /* Removes any default margin */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+html, body {
+    overflow: hidden; /* Prevents scrolling */
+    width: 100%;
+    height: 100%;
+}
+
+.main-menu {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+    /* From https://css.glass */
+
+    /*background: rgba(147, 154, 208, 0.57);*/
+    background: rgba(255, 255, 255, 0.57);
+    
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.1px);
+    -webkit-backdrop-filter: blur(12.1px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-menu-input { 
+    font-size:16px; 
+    border-style:inset; 
+    border-color:#a8a8a8; 
+    text-align:left; 
+    border-width:1px; 
+    border-radius:8px; 
+    box-shadow: 2px 4px 12px 0px rgba(0,0,0,.72); 
+    text-shadow:0px 0px 0px rgba(42,42,42,.75); 
+    font-weight:normal; font-family:sans-serif; 
+    padding:6px;  
+    margin-bottom: 10px;
+}
+
+.main-menu-button {
+    box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    background-color:#bddbfa;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:7px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+    margin-top: 10px;
+}
+.main-menu-button:hover {
+    background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+    background-color:#80b5ea;
+}
