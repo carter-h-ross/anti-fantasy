@@ -12,14 +12,14 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCcdK5cqLuF7LPbfP4eVVD7Ma0CJK3CtTg",
-    authDomain: "anti-fantasy.firebaseapp.com",
-    databaseURL: "https://anti-fantasy-default-rtdb.firebaseio.com",
-    projectId: "anti-fantasy",
-    storageBucket: "anti-fantasy.appspot.com",
-    messagingSenderId: "42157832095",
-    appId: "1:42157832095:web:dcd670b5cb754e0bfbafaa",
-    measurementId: "G-K0GXMP7DTW"
+    apiKey: "hidden",
+    authDomain: "hidden",
+    databaseURL: "hidden",
+    projectId: "hidden",
+    storageBucket: "hidden",
+    messagingSenderId: "hidden",
+    appId: "hidden",
+    measurementId: "hidden"
 };
 
 // Initialize Firebase
