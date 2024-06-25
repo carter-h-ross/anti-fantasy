@@ -33,19 +33,17 @@ html, body {
     left: 10%;
     bottom: 10%;
     right: 10%;
-    /* From https://css.glass */
-
-    /*background: rgba(147, 154, 208, 0.57);*/
-    background: rgba(255, 255, 255, 0.57);
     
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.57); 
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12.1px);
     -webkit-backdrop-filter: blur(12.1px);
+
     display: flex;
     flex-direction: column;
     padding: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -59,7 +57,8 @@ html, body {
     border-radius:8px; 
     box-shadow: 2px 4px 12px 0px rgba(0,0,0,.72); 
     text-shadow:0px 0px 0px rgba(42,42,42,.75); 
-    font-weight:normal; font-family:sans-serif; 
+    font-weight:normal; 
+    font-family:sans-serif; 
     padding:6px;  
     margin-bottom: 10px;
 }
@@ -84,4 +83,46 @@ html, body {
 .main-menu-button:hover {
     background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
     background-color:#80b5ea;
+}
+
+.driverCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.57); 
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.1px);
+    -webkit-backdrop-filter: blur(12.1px);
+    height: 15%;
+    margin-bottom: 10px;
+    padding: 5px; /* Ensures there's padding around the content */
+}
+
+.driverCard div {
+    flex: 1; /* Ensures the divs are distributed evenly */
+    margin: 0 5px; /* Ensures 5px margin between each div */
+}
+
+.driverCard div:first-child {
+    margin-left: 0; /* No margin on the left of the first child */
+}
+
+.driverCard div:last-child {
+    margin-right: 0; /* No margin on the right of the last child */
+}
+
+#manageTeamMenu {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 10px;
 }

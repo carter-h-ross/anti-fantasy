@@ -10,6 +10,7 @@ import { getDatabase, ref, set,get, push, child, remove} from "firebase/database
 import { getStorage, ref as storageRef, uploadBytes , getDownloadURL} from "firebase/storage";
 import { getAuth } from "firebase/auth";
 import { firebaseConfigExport } from "../privateKeys/webpackConfig";
+import { doc } from "firebase/firestore";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfigExport);
@@ -110,10 +111,14 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 const startMenu = document.getElementById("startMenu");
 const seriesChoiceMenu = document.getElementById("seriesChoiceMenu");
+const mainMenu = document.getElementById("mainMenu");
+const manageTeamMenu = document.getElementById("manageTeamMenu");
 
 function hideAllMenus() {
     startMenu.style.display = "none";
     seriesChoiceMenu.style.display = "none"; 
+    mainMenu.style.display = "none";
+    manageTeamMenu.style.display = "none";
 }
 
 function loadMenu(menuName) {
@@ -122,10 +127,90 @@ function loadMenu(menuName) {
         startMenu.style.display = "flex";
     } else if (menuName == "seriesChoiceMenu") {
         seriesChoiceMenu.style.display = "flex"; 
+    } else if (menuName == "mainMenu") {
+        mainMenu.style.display = "flex";
+    } else if (menuName == "manageTeamMenu") {
+        manageTeamMenu.style.display = "flex";
     }
 }
 
 loadMenu("startMenu")
+
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- functions for navigating the menus and simlar  ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+
+const createLeagueButton = document.getElementById("createLeagueButton");
+createLeagueButton.addEventListener("click", function() {
+    
+});
+
+let seriesChoice = "none";
+
+const seriesF1Button = document.getElementById("seriesF1Button");
+seriesF1Button.addEventListener("click", async function() {
+    seriesChoice = "f1";
+    loadSeries("f1")
+    await checkAndCreatePathIfNotExists();
+    loadMenu("manageTeamMenu")
+    createTeamCards();
+});
+
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- functions to load teams and driver stuff ----- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+/* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
+
+const userTeamPath = ref(database, `${email}/teams/${seriesChoice}`)
+let userData = null;
+let currentDrivers = null;
+
+async function checkAndCreatePathIfNotExists() {
+    console.log()
+    try {
+        const snapshot = await get(userTeamPath);
+        if (!snapshot.exists()) {
+            // Path does not exist, create it
+            userData = createNewTeam();
+            currentDrivers = userData.currentDrivers;
+            await set(userTeamPath, userData);
+            console.log(`Created path for series: ${seriesChoice}`);
+        } else {
+            console.log(`Path for series: ${seriesChoice} already exists.`);
+            userData = snapshot;
+        }
+    } catch (error) {
+        console.error("Error checking/creating path:", error);
+    }
+}
+
+function createNewTeam() {
+    let result = {drivers: {}, points: 0, currentDrivers: ["no-driver", "no-driver", "no-driver", "no-driver", "no-driver"]};
+
+    for (let i = 0;i < races.length;i++) {
+        result.drivers[races[i]] = ["no-driver", "no-driver", "no-driver", "no-driver", "no-driver"]
+    }
+
+    return result;
+}
+
+function createTeamCards() {
+    for (let i = 0;i < 5;i++) {
+        const currentLoopDriver = userData.currentDrivers[i];
+        const nextDriverDiv = document.getElementById(`driver${i+1}`)
+        nextDriverDiv.innerHTML = `
+            <div id=driver${i+1} class="driverCard">
+                <h4>${data.drivers[currentLoopDriver].price}</h4>
+                <h4>${currentLoopDriver} - ${data.drivers[currentLoopDriver].team}</h4>
+                <h4>avg. pts: ${Math.floor(scoringData[currentLoopDriver].total)}</h4>
+                <button class="main-menu-button">select driver</button>
+            </div>
+        `
+    }
+}
 
 /* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
 /* ----- ----- ----- ----- ---------------------------------------------- ------ ----- ----- ----- */
@@ -137,6 +222,10 @@ let dnfScaled = true;
 
 // function to calculate the score for one driver from one race
 function calculateOneRaceScore(driver, race) {
+
+    if (driver == "no-driver") {
+        return 0;
+    }
 
     if (debugMode) {
         console.log(data);
@@ -288,9 +377,9 @@ function getAllScoresByDriver() {
 }
 
 // Function to log the drivers in order
-function logDriversInOrder(driversData) {
+function logDriversInOrder(scoringData) {
     // Convert the result object to an array of [key, value] pairs
-    let driverScoresArray = Object.entries(driversData);
+    let driverScoresArray = Object.entries(scoringData);
     
     // Sort the array based on the total scores
     driverScoresArray.sort((a, b) => b[1].total - a[1].total);
@@ -310,11 +399,18 @@ async function loadJSON(file) {
 
 // Loading the points data
 let racesData = null;
-let driversData = null;
-loadJSON('season2024.json').then(seasonData => {
-    data = seasonData;
-    //racesData = getAllScoresByRaces();
-    driversData = getAllScoresByDriver();
-    console.log(racesData);
-    logDriversInOrder(driversData);
-});
+let scoringData = null;
+let races = null;
+let drivers = null;
+
+function loadSeries(seriesChoice) {
+    loadJSON(`${seriesChoice}24.json`).then(seasonData => {
+        data = seasonData;
+        racesData = getAllScoresByRaces();
+        scoringData = getAllScoresByDriver();
+        races = data.races.list;
+        drivers = data.drivers.list;
+        console.log(racesData);
+        logDriversInOrder(scoringData);
+    });
+}
