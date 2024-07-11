@@ -247,7 +247,7 @@ function calculateOneRaceScore(driver, race) {
 
     // preformance vs teamate
     if (qualyPos < tmQualyPos){
-        points -= 5;
+        // points -= 5;
         if (debugMode) {
             console.log(`won qualifying to teamate they got: ${qualyPos} and teamate got: ${tmQualyPos} = -5 pts`)
         }
@@ -259,7 +259,7 @@ function calculateOneRaceScore(driver, race) {
     }
 
     if (racePos < tmRacePos){
-        points -= 10;
+        // points -= 10;
         if (debugMode) {
             console.log(`won race vs teamate they got: ${racePos} and teamate got: ${tmRacePos} = -10 pts`)
         }
@@ -313,12 +313,12 @@ function calculateOneRaceScore(driver, race) {
 
         if (!(sprintFinished)) {
             if (dnfScaled) {
-                points -= Math.round(2 * (21 - sprintQualyPos));
+                points += Math.round(2 * (21 - sprintQualyPos));
                 if (debugMode) {
                     console.log(`dnf in sprint race = ${Math.round(2 * (21 - sprintQualyPos))} pts (dnf scaled)`)
                 }
             } else {
-                points -= 20;
+                points += 20;
                 if (debugMode) {
                     console.log(`dnf in sprint race = -20 pts (dnf not scaled)`)
                 }
@@ -402,6 +402,8 @@ let racesData = null;
 let scoringData = null;
 let races = null;
 let drivers = null;
+
+loadSeries("f1")
 
 function loadSeries(seriesChoice) {
     loadJSON(`${seriesChoice}24.json`).then(seasonData => {
